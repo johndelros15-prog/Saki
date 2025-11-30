@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurevia - Premium Perfumes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-perfume perfume-1">🍾</div>
+    <div class="floating-perfume perfume-2">🌸</div>
+    <div class="floating-perfume perfume-3">🌺</div>
+    <div class="floating-perfume perfume-4">🌷</div>
+    <div class="floating-perfume perfume-5">🌹</div>
+    <div class="floating-perfume perfume-6">💐</div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo">Aurevia</h1>
+            <p class="tagline">Discover Your Signature Scent</p>
+        </div>
+    </header>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav">
+        <button class="category-btn active" data-category="women">Women's Perfumes</button>
+        <button class="category-btn" data-category="men">Men's Perfumes</button>
+        <button class="category-btn" data-category="unisex">Unisex Perfumes</button>
+    </nav>
+
+    <!-- Category Sections -->
+    <main class="main-content">
+        <!-- Women's Perfumes -->
+        <section id="women" class="category-section active">
+            <div class="category-header">
+                <h2>Women's Collection</h2>
+                <p>Embrace your femininity with our curated selection</p>
+            </div>
+            <div class="products-grid" id="women-products"></div>
+        </section>
+
+        <!-- Men's Perfumes -->
+        <section id="men" class="category-section">
+            <div class="category-header">
+                <h2>Men's Collection</h2>
+                <p>Command attention with sophisticated masculinity</p>
+            </div>
+            <div class="products-grid" id="men-products"></div>
+        </section>
+
+        <!-- Unisex Perfumes -->
+        <section id="unisex" class="category-section">
+            <div class="category-header">
+                <h2>Unisex Collection</h2>
+                <p>Break boundaries with gender-fluid fragrances</p>
+            </div>
+            <div class="products-grid" id="unisex-products"></div>
+        </section>
+    </main>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- My Orders Button -->
+    <button id="orders-btn" class="orders-btn">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="order-count">0</span>
+    </button>
+
+    <!-- Orders Panel -->
+    <div id="orders-panel" class="orders-panel">
+        <h3>My Orders</h3>
+        <div id="orders-list"></div>
+        <div class="orders-total">
+            <strong>Total: ₱<span id="total-price">0</span></strong>
+        </div>
+        <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content payment-modal">
+            <span class="close">&times;</span>
+            <h3>Payment Information</h3>
+            <form id="payment-form">
+                <div class="payment-methods">
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="gcash" checked>
+                        <img src="https://via.placeholder.com/50x30/1DB954/FFFFFF?text=GCash" alt="GCash">
+                        GCash
+                    </label>
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="paymaya">
+                        <img src="https://via.placeholder.com/50x30/003366/FFFFFF?text=PayMaya" alt="PayMaya">
+                        PayMaya
+                    </label>
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="cod">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Cash on Delivery
+                    </label>
+                </div>
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit" class="submit-payment">Complete Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="Au.js"></script>
+</body>
+                                                                         </html>
